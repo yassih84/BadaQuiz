@@ -3,46 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Father's Day Quiz from Daveen</title>
-  <style>
-    body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background-color: #fff8f0;
-      color: #333;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      color: #d2691e;
-    }
-    .question {
-      margin-top: 30px;
-      display: none;
-    }
-    .video-container {
-      display: none;
-      margin-top: 15px;
-    }
-    video {
-      width: 300px;
-      border-radius: 10px;
-    }
-    button {
-      margin: 10px;
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      background-color: #f0a500;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #cf8500;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Happy Father's Day, Daddy!</h1>
+  <div class="gift-protector">
+    <div class="gift-protector-bubble">
+      <span id="protector-bubble-text">Welcome! Answer my questions to get closer to your surprise gift! 🎁</span>
+    </div>
+  </div>
+
+  <h1>Happy Father's Day, BADA!</h1>
   <p>Daveen made a special quiz just for you! 🧡<br>Answer each question correctly to see the next one.</p>
 
   <div id="question1" class="question" style="display:block;">
@@ -65,66 +35,75 @@
 
   <div id="question3" class="question">
     <h2>Question 3</h2>
-    <p>When Daveen learned how to make faces, what was the funny face he kept making?</p>
-    <button onclick="checkAnswer(3, 'A')">Duck face</button>
-    <button onclick="checkAnswer(3, 'B')">Bug face</button>
-    <button onclick="checkAnswer(3, 'C')">Moosilini face</button>
-    <button onclick="checkAnswer(3, 'D')">Rabbit face</button>
+    <p>Which of the two combos below is Afrinan noon dip?</p>
+    <button onclick="checkAnswer(3, 'A')">Orange and Peanut Butter</button>
+    <button onclick="checkAnswer(3, 'B')">Bread dipped in yolk</button>
+    <button onclick="checkAnswer(3, 'C')">Egg yolk dipped cucumber</button>
+    <button onclick="checkAnswer(3, 'D')">Peanut butter and jelly</button>
   </div>
 
   <div id="question4" class="question">
     <h2>Question 4</h2>
-    <p>What was Daveen holding when he took his first step?</p>
-    <button onclick="checkAnswer(4, 'A')">A toy</button>
-    <button onclick="checkAnswer(4, 'B')">A water cup</button>
-    <button onclick="checkAnswer(4, 'C')">The remote</button>
-    <button onclick="checkAnswer(4, 'D')">Dad's finger</button>
+    <p>When Daveen learned how to make faces, what was the funny face he kept making?</p>
+    <button onclick="checkAnswer(4, 'A')">Duck face</button>
+    <button onclick="checkAnswer(4, 'B')">Bug face</button>
+    <button onclick="checkAnswer(4, 'C')">Mussolini's face</button>
+    <button onclick="checkAnswer(4, 'D')">Rabbit face</button>
   </div>
 
-  <div id="question5" class="question" style="background-color:#e0f7fa; border: 2px dashed #00bcd4; padding: 20px;">
+  <div id="question5" class="question">
+    <h2>Question 5</h2>
+    <p>What was Daveen holding when he took his first step?</p>
+    <button onclick="checkAnswer(5, 'A')">A toy</button>
+    <button onclick="checkAnswer(5, 'B')">A water cup</button>
+    <button onclick="checkAnswer(5, 'C')">The remote</button>
+    <button onclick="checkAnswer(5, 'D')">Dad's finger</button>
+  </div>
+
+  <div id="question6" class="question" style="background-color:#e0f7fa; border: 2px dashed #00bcd4; padding: 20px;">
     <h2>Guess Daveen's Answer!</h2>
     <p style="font-style:italic; color:#00796b;">Now it's time to guess what Daveen said! Try to pick the answer Daveen gave to this question:</p>
     <p>What song did Daveen and Bada rock to sleep to?</p>
-    <button onclick="checkAnswer(5, 'A')">Hasasna by Otosrad</button>
-    <button onclick="checkAnswer(5, 'B')">A Fairuz song</button>
-    <button onclick="checkAnswer(5, 'C')">Jazz music</button>
-    <button onclick="checkAnswer(5, 'D')">Dance Monkey</button>
-  </div>
-
-  <div id="question6" class="question">
-    <h2>Question 6</h2>
-    <p>What do you think Daveen's answer is to the following question: What is your dad's favorite food?</p>
-    <button onclick="checkAnswer(6, 'A')">Peanut butter</button>
-    <button onclick="checkAnswer(6, 'B')">Labne</button>
-    <button onclick="checkAnswer(6, 'C')">Olive oil</button>
-    <button onclick="checkAnswer(6, 'D')">Pizza</button>
+    <button onclick="checkAnswer(6, 'A')">Hasasna by Otosrad</button>
+    <button onclick="checkAnswer(6, 'B')">A Fairuz song</button>
+    <button onclick="checkAnswer(6, 'C')">Jazz music</button>
+    <button onclick="checkAnswer(6, 'D')">Dance Monkey</button>
   </div>
 
   <div id="question7" class="question">
     <h2>Question 7</h2>
-    <p>Daveen, when is your dad most funny?</p>
-    <button onclick="checkAnswer(7, 'A')">When he mixes up his left and right hand and my left and right hand</button>
-    <button onclick="checkAnswer(7, 'B')"></button>
-    <button onclick="checkAnswer(7, 'C')"></button>
-    <button onclick="checkAnswer(7, 'D')"></button>
+    <p>What do you think Daveen's answer is to the following question: What is your dad's favorite food?</p>
+    <button onclick="checkAnswer(7, 'A')">Peanut butter</button>
+    <button onclick="checkAnswer(7, 'B')">Labne</button>
+    <button onclick="checkAnswer(7, 'C')">Olive oil</button>
+    <button onclick="checkAnswer(7, 'D')">Pizza</button>
   </div>
 
   <div id="question8" class="question">
     <h2>Question 8</h2>
-    <p>What is your favorite thing about your dad?</p>
-    <button onclick="checkAnswer(8, 'A')">When we play lego together</button>
-    <button onclick="checkAnswer(8, 'B')"></button>
-    <button onclick="checkAnswer(8, 'C')"></button>
-    <button onclick="checkAnswer(8, 'D')"></button>
+    <p>Daveen, when is your dad most funny?</p>
+    <button onclick="checkAnswer(8, 'A')">When he mixes up his left and right hand and my left and right hand</button>
+    <button onclick="checkAnswer(8, 'B')">When he made a silly face</button>
+    <button onclick="checkAnswer(8, 'C')">When I squash spidy on him</button>
+    <button onclick="checkAnswer(8, 'D')">All of the above</button>
   </div>
 
   <div id="question9" class="question">
     <h2>Question 9</h2>
-    <p>What is Daveen's feeling when I watch the secret videos?</p>
-    <button onclick="checkAnswer(9, 'A')">Excited</button>
-    <button onclick="checkAnswer(9, 'B')">Scared</button>
-    <button onclick="checkAnswer(9, 'C')">Feeling funny</button>
-    <button onclick="checkAnswer(9, 'D')">Tired</button>
+    <p>What is your favorite thing about your dad?</p>
+    <button onclick="checkAnswer(9, 'A')">When we play lego together</button>
+    <button onclick="checkAnswer(9, 'B')">When I sing the chicken wings song</button>
+    <button onclick="checkAnswer(9, 'C')">When we play minecraft survival mode</button>
+    <button onclick="checkAnswer(9, 'D')">A & C</button>
+  </div>
+
+  <div id="question10" class="question">
+    <h2>Question 9</h2>
+    <p>What is Daveen's feeling when he watches the secret videos?</p>
+    <button onclick="checkAnswer(10, 'A')">Excited</button>
+    <button onclick="checkAnswer(10, 'B')">Scared</button>
+    <button onclick="checkAnswer(10, 'C')">Feeling funny</button>
+    <button onclick="checkAnswer(10, 'D')">Tired</button>
   </div>
 
   <div id="congrats" class="question">
@@ -138,110 +117,12 @@
   </div>
 
   <script>
-    const answers = {
-      1: 'C', // Correct answer: "Buggie"
-      2: 'C', // Correct answer: "He held Dad’s finger really tight"
-      3: 'C', // Correct answer: "Moosilini face"
-      4: 'B', // Correct answer: "A water cup"
-      5: 'A', // Correct answer: "Hasasna by Otosrad"
-      6: 'A', // Correct answer: "Peanut butter"
-      7: 'A', // Correct answer: "When he mixes up his left and right hand and my left and right hand"
-      8: 'A', // Correct answer: "When we play lego together"
-      9: 'A'  // Correct answer: "Excited"
+    // Add error handling for the gift protector image
+    document.querySelector('.gift-protector-img').onerror = function() {
+      this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAiIGhlaWdodD0iODAiIHZpZXdCb3g9IjAgMCA4MCA4MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSI0MCIgZmlsbD0iI2YwYTUwMCIvPjwvc3ZnPg==';
+      console.log('Avatar image failed to load, using fallback');
     };
-
-    function showConfettiMessage(onContinue) {
-      // Create overlay
-      let overlay = document.createElement('div');
-      overlay.id = 'confetti-overlay';
-      overlay.style.position = 'fixed';
-      overlay.style.top = 0;
-      overlay.style.left = 0;
-      overlay.style.width = '100vw';
-      overlay.style.height = '100vh';
-      overlay.style.background = 'repeating-linear-gradient(135deg, #fff176 0 20px, #ff8a65 20px 40px, #81d4fa 40px 60px, #aed581 60px 80px)';
-      overlay.style.display = 'flex';
-      overlay.style.flexDirection = 'column';
-      overlay.style.alignItems = 'center';
-      overlay.style.justifyContent = 'center';
-      overlay.style.zIndex = 9999;
-      overlay.style.animation = 'pop 0.5s';
-
-      // Funny message
-      const messages = [
-        "Good job Bada! You're one giggle closer to your gift! 🎁🥳",
-        "Woohoo! Bada, you crushed it! The gift is getting nervous! 😆🎉",
-        "Nice! Bada, your gift is peeking out already! 🕵️‍♂️🎁",
-        "Bravo! Bada, the gift fairy is warming up! 🧚‍♂️✨",
-        "Yay! Bada, you’re on a roll! The gift can almost smell you! 😂🎁",
-        "Bada, you’re a quiz superstar! The gift is doing a happy dance! 💃🎁",
-        "You did it, Bada! The gift is wrapping itself up! 🎁🌀",
-        "Legendary answer, Bada! The gift is calling your name! 📣🎁",
-        "Bada, you’re unstoppable! The gift is getting closer! 🏃‍♂️🎁",
-        "You’re making this look easy, Bada! The gift is getting excited! 🤩🎁",
-        "Bada, you’re a quiz ninja! The gift is hiding in plain sight! 🥷🎁"
-      ];
-      let msg = document.createElement('div');
-      msg.innerText = messages[Math.floor(Math.random() * messages.length)];
-      msg.style.fontSize = '2rem';
-      msg.style.color = '#d2691e';
-      msg.style.background = 'rgba(255,255,255,0.95)';
-      msg.style.padding = '40px 60px';
-      msg.style.borderRadius = '20px';
-      msg.style.boxShadow = '0 4px 24px rgba(0,0,0,0.15)';
-      msg.style.fontFamily = "'Comic Sans MS', cursive, sans-serif";
-      msg.style.marginBottom = '30px';
-      overlay.appendChild(msg);
-
-      // Continue button
-      const btns = [
-        "I'm ready for the next question!",
-        "Bring on the next one!",
-        "Let's keep going!",
-        "Next question, please!",
-        "Hit me with the next one!"
-      ];
-      let btn = document.createElement('button');
-      btn.innerText = btns[Math.floor(Math.random() * btns.length)];
-      btn.style.fontSize = '1.2rem';
-      btn.style.padding = '16px 32px';
-      btn.style.background = '#f0a500';
-      btn.style.color = 'white';
-      btn.style.border = 'none';
-      btn.style.borderRadius = '12px';
-      btn.style.cursor = 'pointer';
-      btn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.10)';
-      btn.style.fontFamily = "'Comic Sans MS', cursive, sans-serif";
-      btn.onclick = function() {
-        overlay.remove();
-        if (onContinue) onContinue();
-      };
-      overlay.appendChild(btn);
-
-      document.body.appendChild(overlay);
-    }
-
-    function checkAnswer(questionNumber, selected) {
-      if (selected === answers[questionNumber]) {
-        showConfettiMessage(() => {
-          const current = document.getElementById(`question${questionNumber}`);
-          current.style.display = 'none';
-          if (questionNumber < 9) {
-            document.getElementById(`question${questionNumber + 1}`).style.display = 'block';
-          } else {
-            document.getElementById('congrats').style.display = 'block';
-          }
-        });
-      } else {
-        alert("Oops! Try again, Daddy! 😄");
-      }
-    }
-
-    // Add a simple pop animation for the overlay
-    const style = document.createElement('style');
-    style.innerHTML = `@keyframes pop { 0% { transform: scale(0.8); opacity: 0.5; } 100% { transform: scale(1); opacity: 1; } }`;
-    document.head.appendChild(style);
   </script>
+  <script src="script.js"></script>
 </body>
 </html>
-
