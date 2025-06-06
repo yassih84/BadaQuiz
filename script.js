@@ -7,7 +7,7 @@ const answers = {
   3: 'C', // Correct answer: "Egg yolk dipped cucumber"
   4: 'C', // Correct answer: "Mussolini's face"
   5: 'B', // Correct answer: "Dad's finger"
-  6: 'A', // Correct answer: "Hasasna by Otosrad"
+  6: 'D', // Correct answer: "Hasasna by Otosrad"
   7: 'A', // Correct answer: "Peanut butter"
   8: 'D', // Correct answer: "All of the above"
   9: 'D', // Correct answer: "A & C"
