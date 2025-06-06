@@ -6,30 +6,20 @@ const answers = {
   2: 'C', // Correct answer: "He held Dad's finger really tight"
   3: 'C', // Correct answer: "Egg yolk dipped cucumber"
   4: 'C', // Correct answer: "Mussolini's face"
-  5: 'B', // Correct answer: "Dad's finger"
+  5: 'B', // Correct answer: "A water cup"
   6: 'D', // Correct answer: "Hasasna by Otosrad"
   7: 'A', // Correct answer: "Peanut butter"
   8: 'D', // Correct answer: "All of the above"
   9: 'D', // Correct answer: "A & C"
-  10: 'A'  // Correct answer: "Excited"
+  10: 'A', // Correct answer: "Excited"
+  11: 'B'  // Correct answer: "Just a person"
 };
 
 function updateProgress() {
   const progress = (answeredQuestions.size / Object.keys(answers).length) * 100;
   document.getElementById('progress-bar').style.width = progress + '%';
   document.getElementById('progress-text').textContent = 
-    `${answeredQuestions.size+1}/10 Questions`;
-}s = {
-  1: 'B', // Correct answer: "Put Put"
-  2: 'C', // Correct answer: "He held Dad's finger really tight"
-  3: 'C', // Correct answer: "Egg yolk dipped cucumber"
-  4: 'C', // Correct answer: "Mussolini's face"
-  5: 'B', // Correct answer: "Dad's finger"
-  6: 'A', // Correct answer: "Hasasna by Otosrad"
-  7: 'A', // Correct answer: "Peanut butter"
-  8: 'D', // Correct answer: "All of the above"
-  9: 'D', // Correct answer: "A & C"
-  10: 'A'  // Correct answer: "Excited"
+    `${answeredQuestions.size+1}/11 Questions`;
 };
 
 
@@ -111,7 +101,7 @@ function checkAnswer(questionNumber, selected) {
     showConfettiMessage(() => {
       const current = document.getElementById(`question${questionNumber}`);
       current.style.display = 'none';
-      if (questionNumber < 10) {
+      if (questionNumber < 11) {
         document.getElementById(`question${questionNumber + 1}`).style.display = 'block';
       } else {
         document.getElementById('congrats').style.display = 'block';
