@@ -7,16 +7,19 @@
 </head>
 <body>
   <div class="gift-protector">
-    <div class="gift-protector-bubble">
       <span id="protector-bubble-text">Welcome! Answer my questions to get closer to your surprise gift! 🎁</span>
-    </div>
   </div>
 
   <h1>Happy Father's Day, BADA!</h1>
   <p>Daveen made a special quiz just for you! 🧡<br>Answer each question correctly to see the next one.</p>
 
+  <div class="progress-container">
+    <div id="progress-bar"></div>
+    <div id="progress-text">1/10 Questions</div>
+  </div>
+
   <div id="question1" class="question" style="display:block;">
-    <h2>Question 1</h2>
+    <h3>Question 1</h3>
     <p>Before Daveen was born, what is the nickname Dad had given him?</p>
     <button onclick="checkAnswer(1, 'A')">DIDI</button>
     <button onclick="checkAnswer(1, 'B')">Put Put</button>
@@ -25,7 +28,7 @@
   </div>
 
   <div id="question2" class="question">
-    <h2>Question 2</h2>
+    <h3>Question 2</h3>
     <p>When Daveen was born and met Dad for the very first time at the hospital, what special thing did he do?</p>
     <button onclick="checkAnswer(2, 'A')">He cried loudly</button>
     <button onclick="checkAnswer(2, 'B')">He gave Dad a big hug</button>
@@ -34,16 +37,16 @@
   </div>
 
   <div id="question3" class="question">
-    <h2>Question 3</h2>
+    <h3>Question 3</h3>
     <p>Which of the two combos below is Afrinan noon dip?</p>
     <button onclick="checkAnswer(3, 'A')">Orange and Peanut Butter</button>
     <button onclick="checkAnswer(3, 'B')">Bread dipped in yolk</button>
-    <button onclick="checkAnswer(3, 'C')">Egg yolk dipped cucumber</button>
+    <button onclick="checkAnswer(3, 'C')">cucumber dipped in egg yolk</button>
     <button onclick="checkAnswer(3, 'D')">Peanut butter and jelly</button>
   </div>
 
   <div id="question4" class="question">
-    <h2>Question 4</h2>
+    <h3>Question 4</h3>
     <p>When Daveen learned how to make faces, what was the funny face he kept making?</p>
     <button onclick="checkAnswer(4, 'A')">Duck face</button>
     <button onclick="checkAnswer(4, 'B')">Bug face</button>
@@ -52,7 +55,7 @@
   </div>
 
   <div id="question5" class="question">
-    <h2>Question 5</h2>
+    <h3>Question 5</h3>
     <p>What was Daveen holding when he took his first step?</p>
     <button onclick="checkAnswer(5, 'A')">A toy</button>
     <button onclick="checkAnswer(5, 'B')">A water cup</button>
@@ -60,8 +63,8 @@
     <button onclick="checkAnswer(5, 'D')">Dad's finger</button>
   </div>
 
-  <div id="question6" class="question" style="background-color:#e0f7fa; border: 2px dashed #00bcd4; padding: 20px;">
-    <h2>Guess Daveen's Answer!</h2>
+  <div id="question6" class="question">
+      <h3>Question 6</h3>
     <p style="font-style:italic; color:#00796b;">Now it's time to guess what Daveen said! Try to pick the answer Daveen gave to this question:</p>
     <p>What song did Daveen and Bada rock to sleep to?</p>
     <button onclick="checkAnswer(6, 'A')">Hasasna by Otosrad</button>
@@ -71,7 +74,9 @@
   </div>
 
   <div id="question7" class="question">
-    <h2>Question 7</h2>
+    <h3>Question 7</h3>
+        <p style="font-style:italic; color:#00796b;">Now it's time to guess what Daveen said! Try to pick the answer Daveen gave to this question:</p>
+
     <p>What do you think Daveen's answer is to the following question: What is your dad's favorite food?</p>
     <button onclick="checkAnswer(7, 'A')">Peanut butter</button>
     <button onclick="checkAnswer(7, 'B')">Labne</button>
@@ -80,7 +85,7 @@
   </div>
 
   <div id="question8" class="question">
-    <h2>Question 8</h2>
+    <h3>Question 8</h3>
     <p>Daveen, when is your dad most funny?</p>
     <button onclick="checkAnswer(8, 'A')">When he mixes up his left and right hand and my left and right hand</button>
     <button onclick="checkAnswer(8, 'B')">When he made a silly face</button>
@@ -89,7 +94,7 @@
   </div>
 
   <div id="question9" class="question">
-    <h2>Question 9</h2>
+    <h3>Question 9</h3>
     <p>What is your favorite thing about your dad?</p>
     <button onclick="checkAnswer(9, 'A')">When we play lego together</button>
     <button onclick="checkAnswer(9, 'B')">When I sing the chicken wings song</button>
@@ -98,7 +103,7 @@
   </div>
 
   <div id="question10" class="question">
-    <h2>Question 9</h2>
+    <h3>Question 10</h3>
     <p>What is Daveen's feeling when he watches the secret videos?</p>
     <button onclick="checkAnswer(10, 'A')">Excited</button>
     <button onclick="checkAnswer(10, 'B')">Scared</button>
@@ -107,13 +112,17 @@
   </div>
 
   <div id="congrats" class="question">
-    <h2>🎉 You did it, Daddy! 🎉</h2>
+    <h2>🎉 You did it, Bada! 🎉</h2>
     <p>Daveen says: "I love you soooo much!"
     <br>Happy Father's Day! 💖</p>
     <div class="video-container" id="final-video" style="display:block; margin-top:20px;">
-      <video controls src="https://drive.google.com/file/d/1Jx5WP33NBgt3gzXim5M1daG52kQjUHQO/view?usp=sharings" style="width:300px; border-radius:10px;" autoplay></video>
+      <iframe src="https://drive.google.com/file/d/1Jx5WP33NBgt3gzXim5M1daG52kQjUHQO/preview" style="width:300px; height:200px; border-radius:10px; border:none;" allow="autoplay"></iframe>
       <p style="color:#00796b; font-style:italic;">Enjoy this special 30 second video from Daveen!</p>
     </div>
+    <div style="text-align: center; margin-top: 20px;">
+      <button onclick="window.open('https://drive.google.com/file/d/1Eo_sGlZ5dMfcAGPWbaTFgBt4RtsDH1ul/preview', '_blank')" style="padding: 10px 20px; background-color: #00bcd4; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px;">Watch Another Special Video! 💝</button>
+    </div>
+    <p style="margin-top: 30px; color: #d2691e; font-style: italic; font-size: 1.2em;">🎁 After watching the videos, ask Daveen to give you a clue about where your Father's Day gift is hidden! 🕵️‍♂️</p>
   </div>
 
   <script>

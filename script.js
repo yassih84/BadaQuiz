@@ -1,16 +1,37 @@
+// Track answered questions
+let answeredQuestions = new Set();
+
 const answers = {
   1: 'B', // Correct answer: "Put Put"
-  2: 'C', // Correct answer: "He held Dad’s finger really tight"
-  3: 'C', // Correct answer: "Egg Yolke"
-  4: 'C', // Correct answer: "A water cup"
-  5: 'B', // Correct answer: "Hasasna by Otosrad"
-  6: 'A', // Correct answer: "Peanut butter"
-  7: 'A', // Correct answer: "When he mixes up his left and right hand and my left and right hand"
-  8: 'D', // Correct answer: "When we play lego together"
-  9: 'D',  // Correct answer: "Excited"
-  10: 'A'  // Correct answer: "He is a
-  
+  2: 'C', // Correct answer: "He held Dad's finger really tight"
+  3: 'C', // Correct answer: "Egg yolk dipped cucumber"
+  4: 'C', // Correct answer: "Mussolini's face"
+  5: 'B', // Correct answer: "Dad's finger"
+  6: 'A', // Correct answer: "Hasasna by Otosrad"
+  7: 'A', // Correct answer: "Peanut butter"
+  8: 'D', // Correct answer: "All of the above"
+  9: 'D', // Correct answer: "A & C"
+  10: 'A'  // Correct answer: "Excited"
 };
+
+function updateProgress() {
+  const progress = (answeredQuestions.size / Object.keys(answers).length) * 100;
+  document.getElementById('progress-bar').style.width = progress + '%';
+  document.getElementById('progress-text').textContent = 
+    `${answeredQuestions.size+1}/10 Questions`;
+}s = {
+  1: 'B', // Correct answer: "Put Put"
+  2: 'C', // Correct answer: "He held Dad's finger really tight"
+  3: 'C', // Correct answer: "Egg yolk dipped cucumber"
+  4: 'C', // Correct answer: "Mussolini's face"
+  5: 'B', // Correct answer: "Dad's finger"
+  6: 'A', // Correct answer: "Hasasna by Otosrad"
+  7: 'A', // Correct answer: "Peanut butter"
+  8: 'D', // Correct answer: "All of the above"
+  9: 'D', // Correct answer: "A & C"
+  10: 'A'  // Correct answer: "Excited"
+};
+
 
 function showConfettiMessage(onContinue) {
   // Create overlay
@@ -85,10 +106,12 @@ function showConfettiMessage(onContinue) {
 
 function checkAnswer(questionNumber, selected) {
   if (selected === answers[questionNumber]) {
+    answeredQuestions.add(questionNumber);
+    updateProgress();
     showConfettiMessage(() => {
       const current = document.getElementById(`question${questionNumber}`);
       current.style.display = 'none';
-      if (questionNumber < 9) {
+      if (questionNumber < 10) {
         document.getElementById(`question${questionNumber + 1}`).style.display = 'block';
       } else {
         document.getElementById('congrats').style.display = 'block';
